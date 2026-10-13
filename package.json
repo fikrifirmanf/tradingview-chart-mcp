@@ -1,0 +1,55 @@
+{
+  "name": "tradingview-chart-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that drives the TradingView web chart: screenshots, drawings, indicators, timeframes, alert webhook. Works over stdio and Streamable HTTP.",
+  "type": "module",
+  "bin": {
+    "tradingview-chart-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "playwright-core": "^1.49.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "license": "MIT",
+  "author": "Fikri Firman Fadilah",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tradingview",
+    "trading",
+    "chart",
+    "screenshot",
+    "playwright",
+    "ai-agent"
+  ],
+  "files": [
+    "dist",
+    "scripts/chrome-debug.sh",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fikrifirmanf/tradingview-chart-mcp.git"
+  },
+  "homepage": "https://github.com/fikrifirmanf/tradingview-chart-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/fikrifirmanf/tradingview-chart-mcp/issues"
+  }
+}
